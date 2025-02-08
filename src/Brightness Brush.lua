@@ -35,10 +35,10 @@ local function	DarkenLinearRGB(rgb, factor)
 end
 
 local function	LightenRGB(rgb, factor)
-    rgb[1] = math.min(255, math.floor(rgb[1] + (factor * (255 - rgb[1]))))
-    rgb[2] = math.min(255, math.floor(rgb[2] + (factor * (255 - rgb[2]))))
-    rgb[3] = math.min(255, math.floor(rgb[3] + (factor * (255 - rgb[3]))))
-    return { rgb[1], rgb[2], rgb[3] }
+	rgb[1] = math.min(255, math.floor(rgb[1] * (1.0 + factor)))
+	rgb[2] = math.min(255, math.floor(rgb[2] * (1.0 + factor)))
+	rgb[3] = math.min(255, math.floor(rgb[3] * (1.0 + factor)))
+	return { rgb[1], rgb[2], rgb[3] }
 end
 
 local function	LightenLinearRGB(rgb, factor)
