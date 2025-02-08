@@ -1,5 +1,5 @@
-# AxiomRessources
-Axiom Ressources I made through time
+# AxiomResources
+Axiom Resources I made through time
 
 ## Script brushes
 
