@@ -1,5 +1,5 @@
 -- Requires Axiom 4.5.3 or later
--- Lighten Brush script 1.0 by MazeWave
+-- Lighten Brush script 1.1 by MazeWave
 
 _G.factor = $float(Factor, 0.1, 0.05, 0.25)$
 _G.islinear = $boolean(Increase linearly (Introduce color bleed), false)$

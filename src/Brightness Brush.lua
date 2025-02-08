@@ -1,5 +1,5 @@
 -- Requires Axiom 4.5.3 or later
--- Brightness Brush script 1.0 by MazeWave
+-- Brightness Brush script 1.1 by MazeWave
 
 _G.factor = $float(Factor, 0.1, 0.05, 0.25)$
 _G.islinear = $boolean(Use linear method (Introduce color bleed), false)$
