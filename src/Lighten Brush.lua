@@ -71,16 +71,6 @@ end
 local function	getFinalLightenRGBasHEX(block)
 	local	hex = getBlockRGB(block)
 
-	if (islinear == true) then
-		return (ConvertRGBTableToHex(LightenLinearRGB(ConvertHexToRGBTable(hex), factor)))
-	end
-
-	return (ConvertRGBTableToHex(LightenRGB(ConvertHexToRGBTable(hex), factor)))
-end
-
-local function	getFinalLightenRGBasHEX(block)
-	local	hex = getBlockRGB(block)
-
 	if (islinear) then
 		return (ConvertRGBTableToHex(LightenLinearRGB(ConvertHexToRGBTable(hex), factor)))
 	else

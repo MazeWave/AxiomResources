@@ -70,16 +70,6 @@ end
 local function	getFinalDarkenRGBasHEX(block)
 	local	hex = getBlockRGB(block)
 
-	if (islinear == true) then
-		return (ConvertRGBTableToHex(DarkenLinearRGB(ConvertHexToRGBTable(hex), factor)))
-	end
-
-	return (ConvertRGBTableToHex(DarkenRGB(ConvertHexToRGBTable(hex), factor)))
-end
-
-local function	getFinalDarkenRGBasHEX(block)
-	local	hex = getBlockRGB(block)
-
 	if (islinear) then
 		return (ConvertRGBTableToHex(DarkenLinearRGB(ConvertHexToRGBTable(hex), factor)))
 	else
