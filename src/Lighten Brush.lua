@@ -1,5 +1,5 @@
 -- Requires Axiom 4.5.3 or later
--- Lighten Brush script 2.0 by MazeWave
+-- Lighten Brush script 2.1 by MazeWave
 -- Source : https://github.com/MazeWave/AxiomResources
 
 -- USER INPUT
@@ -20,15 +20,15 @@ _G.scaled_factor	= math.floor( (factor / 2) * 255 )
 
 -- FUNCTIONS
 local function	GetFlagsBinary()
-	local	F = isF and 1 or 0
 	local	S = isS and 1 or 0
-	local	O = isO and 1 or 0
-	local	T = isT and 1 or 0
-	local	NO = isNO and 1 or 0
-	local	NG = isNG and 1 or 0
-	local	NT = isNT and 1 or 0
+	local	O = isO and 2 or 0
+	local	F = isF and 4 or 0
+	local	T = isT and 8 or 0
+	local	NO = isNO and 16 or 0
+	local	NG = isNG and 32 or 0
+	local	NT = isNT and 64 or 0
 
-	return ( (S * 1) + (O * 2) + (F * 4) + (T * 8) + (NO * 16) + (NG * 32) + (NT * 64) )
+	return ( S + O + F + T + NO + NG + NT )
 end
 
 local function	ConvertHexToRGBTable(hex)
@@ -79,7 +79,7 @@ local function	getFinalLightenRGBasHEX(block)
 end
 
 -- MAIN FUNCTION
-if (getBlock(x, y, z) == blocks.air) then
+if (getBlock(x, y, z) == blocks.air or getBlockRGB(getBlock(x, y, z)) == nil) then
 	return nil
 else
 	return findClosestBlockToRGB(getFinalLightenRGBasHEX(getBlock(x, y, z)), GetFlagsBinary(), index)
