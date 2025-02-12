@@ -10,6 +10,8 @@ Axiom Resources I made through time
 - Saturation Brush
 - HUEShift Brush
 
+- Posterize Brush
+
 ### HOW TO INSTALL
 
 - Click on the big **Green button**.
