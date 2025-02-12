@@ -1,5 +1,5 @@
 -- Requires Axiom 4.5.3 or later
--- Posterize Brush script 1.0 by MazeWave
+-- Posterize Brush script 1.1 by MazeWave
 -- Source : https://github.com/MazeWave/AxiomResources
 
 -- USER INPUT
@@ -64,30 +64,11 @@ local function	GetQuantizedColorRGB(rgb)
 	}
 end
 
-local function	GetQuantizedColorHSV(hsv)
-	if steps < 3 then return hsv end
-
-	return
-	{
-		hsv[1],
-		hsv[2],
-		QuantizeChannel(hsv[3] * 255) / 255
-	}
-end
-
 local function	Quantize(block)
 	local	hex = getBlockRGB(block)
 	local	rgb = ConvertHexToRGBTable(hex)
-	
-	if (isHSV) then
-		local	hsv = RGBToHSV(rgb)
-		local	newRGB = GetQuantizedColorHSV(hsv)
-		newRGB = HSVToRGB(rgb)
-		local	newHEX = ConvertRGBTableToHex(newRGB)
-		return newHEX
-	else		
-		local	newRGB = GetQuantizedColorRGB(rgb);
-		local	newHEX = ConvertRGBTableToHex(newRGB)
+	local	newRGB = GetQuantizedColorRGB(rgb);
+	local	newHEX = ConvertRGBTableToHex(newRGB)
 		return newHEX
 	end
 end
