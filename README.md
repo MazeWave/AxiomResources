@@ -7,6 +7,9 @@ Axiom Resources I made through time
 - Darken Brush
 - Lighten Brush
 
+- Saturation Brush
+- HUEShift Brush
+
 ### HOW TO INSTALL
 
 - Click on the big **Green button**.
