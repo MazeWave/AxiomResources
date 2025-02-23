@@ -1,5 +1,5 @@
 -- Requires Axiom 4.5.3 or later
--- Posterize Brush script 1.1 by MazeWave
+-- Posterize Brush script 1.2 by MazeWave
 -- Source : https://github.com/MazeWave/AxiomResources
 
 -- USER INPUT
@@ -69,8 +69,7 @@ local function	Quantize(block)
 	local	rgb = ConvertHexToRGBTable(hex)
 	local	newRGB = GetQuantizedColorRGB(rgb);
 	local	newHEX = ConvertRGBTableToHex(newRGB)
-		return newHEX
-	end
+	return newHEX
 end
 
 -- MAIN FUNCTION
